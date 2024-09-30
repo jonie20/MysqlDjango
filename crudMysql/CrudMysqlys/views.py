@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from CrudMysqlys.forms import StudentForm
-from CrudMysqlys import Student
+from CrudMysqlys.models import Student
 
 def emp(request):
 	if request.method == "POST":
