@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from crudMysql import views
+from crudMysqlys import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
