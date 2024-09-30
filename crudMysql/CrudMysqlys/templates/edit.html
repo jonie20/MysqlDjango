@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	{% load static %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="{% static '/style.css' %}"/> -->
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{student.id}}">
+		{% csrf_token %}
+
+	<div class="container">
+		<br>
+		<div class="form-group row">
+		<label class="col-sm-1 col-form-lable"></label>	
+			<div class="col-sm-4">
+				<h3>Update Details</h3>
+			</div>
+		</div>
+	
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-lable">Student ID : </label>
+			<div class="col-sm-4">
+				<input type="text" name="eid" id="id_eid" value="{{ student.sid }}"/>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-lable">Student Name : </label>
+			<div class="col-sm-4">
+				<input type="text" name="ename" id="id_ename" value="{{ student.sname }}"/>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-lable">Student Email : </label>
+			<div class="col-sm-4">
+				<input type="text" name="eemail" id="id_eemail" value="{{ student.semail }}"/>
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<label class="col-sm-2 col-form-lable">Student Contact : </label>
+			<div class="col-sm-4">
+				<input type="text" name="econtact" id="id_econtact" value="{{ student.scontact }}"/>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-success">Update</button>
+	</div>
+
+</form>
+</body>
+</html>
